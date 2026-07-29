@@ -34,7 +34,7 @@
 /* ===== CONTACT FORM ===== */
 .contact-form-wrap {
     background: var(--color-white);
-    padding: var(--space-2xl);
+    padding: var(--space-xl);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     border: 1px solid var(--color-border);
@@ -42,7 +42,7 @@
 
 .contact-form-wrap h2 {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color-text);
     margin-bottom: var(--space-xs);
 }
@@ -56,7 +56,7 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: var(--space-lg);
+    gap: var(--space-md);
 }
 
 .form-row {
@@ -79,9 +79,9 @@
 
 .form-group label {
     position: absolute;
-    top: 14px;
-    left: 16px;
-    font-size: 0.95rem;
+    top: 11px;
+    left: 13px;
+    font-size: 0.88rem;
     color: var(--color-text-lighter);
     transition: all 0.2s ease;
     pointer-events: none;
@@ -93,11 +93,11 @@
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 16px;
+    padding: 12px 13px;
     border: 1px solid var(--color-border-strong);
     border-radius: var(--radius-sm);
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--color-text);
     background: transparent;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -113,7 +113,7 @@
 
 .form-group textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 100px;
 }
 
 .form-group input:focus,
@@ -128,9 +128,9 @@
 .form-group input:not(:placeholder-shown) ~ label,
 .form-group textarea:focus ~ label,
 .form-group textarea:not(:placeholder-shown) ~ label {
-    top: -10px;
-    left: 12px;
-    font-size: 0.8rem;
+    top: -9px;
+    left: 10px;
+    font-size: 0.75rem;
     color: var(--color-accent);
     font-weight: 500;
 }
@@ -153,10 +153,10 @@
 }
 
 .contact-form__submit {
-    margin-top: var(--space-sm);
+    margin-top: var(--space-xs);
     width: 100%;
     justify-content: center;
-    padding: 16px;
+    padding: 12px;
 }
 
 .contact-success {
@@ -199,7 +199,7 @@
 
 .contact-info h2 {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color-text);
     margin-bottom: var(--space-xs);
 }
@@ -250,10 +250,10 @@
 .contact-info__link {
     display: block;
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--color-text);
     text-decoration: none;
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-2xs);
     transition: color 0.2s ease;
 }
 
