@@ -1,0 +1,129 @@
+/* E:\Project\RajPhotography\css\contact.css */
+.contact-hero {
+  padding-top: calc(var(--nav-height) + var(--space-4xl));
+  padding-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4xl);
+}
+
+@media (min-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+/* Form Styles */
+.contact-form {
+  background-color: var(--color-white);
+  padding: var(--space-3xl);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: var(--space-2xl);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--space-sm) 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color var(--transition-base);
+}
+
+.form-control:focus {
+  outline: none;
+  border-bottom-color: var(--color-accent);
+}
+
+.form-label {
+  position: absolute;
+  top: var(--space-sm);
+  left: 0;
+  color: var(--color-text-light);
+  font-size: 1rem;
+  transition: all var(--transition-base);
+  pointer-events: none;
+}
+
+.form-control:focus ~ .form-label,
+.form-control:not(:placeholder-shown) ~ .form-label {
+  top: -20px;
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: var(--space-md);
+}
+
+/* Contact Info */
+.contact-info {
+  background-color: var(--color-bg-alt);
+  padding: var(--space-3xl);
+  border-radius: var(--radius-sm);
+}
+
+.contact-info h3 {
+  margin-bottom: var(--space-xl);
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.info-icon {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.info-details h4 {
+  font-size: 1rem;
+  margin-bottom: var(--space-xs);
+}
+
+.info-details p, .info-details a {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.info-details a:hover {
+  color: var(--color-accent);
+}
+
+.map-placeholder {
+  margin-top: var(--space-2xl);
+  width: 100%;
+  height: 250px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  font-family: var(--font-accent);
+  font-style: italic;
+}

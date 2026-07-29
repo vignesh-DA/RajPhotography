@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Raj Photography for wedding, pre-wedding, candid, maternity, baby, and documentary photography bookings. Call +91 76761 47560.">
+    <title>Contact Us — Raj Photography</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="navbar" id="navbar">
+        <div class="navbar__inner container">
+            <a href="index.html" class="navbar__logo" aria-label="Raj Photography Home">
+                <span class="navbar__logo-text">Raj</span>
+                <span class="navbar__logo-sub">Photography</span>
+            </a>
+            <nav class="navbar__nav" id="navMenu" aria-label="Main navigation">
+                <ul class="navbar__links">
+                    <li><a href="index.html" class="navbar__link">Home</a></li>
+                    <li><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
+                    <li><a href="about.html" class="navbar__link">About</a></li>
+                    <li><a href="services.html" class="navbar__link">Services</a></li>
+                    <li><a href="testimonials.html" class="navbar__link">Testimonials</a></li>
+                    <li><a href="contact.html" class="navbar__link active">Contact</a></li>
+                </ul>
+                <div class="navbar__actions">
+                    <a href="tel:+917676147560" class="navbar__phone" aria-label="Call us">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span>+91 76761 47560</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-primary navbar__cta">Book Now</a>
+                </div>
+            </nav>
+            <button class="navbar__hamburger" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== PAGE HERO ========== -->
+        <section class="page-hero page-hero--contact" id="page-hero">
+            <div class="page-hero__bg">
+                <img src="assets/images/services/candid-cinematography/10.jpg" alt="Contact Raj Photography" loading="eager">
+            </div>
+            <div class="page-hero__overlay"></div>
+            <div class="page-hero__content container">
+                <p class="page-hero__subtitle reveal" data-reveal="fade-up">Let's Connect</p>
+                <h1 class="page-hero__title reveal" data-reveal="fade-up" data-delay="100">Contact</h1>
+                <p class="page-hero__desc reveal" data-reveal="fade-up" data-delay="200">Ready to book? Have questions? We'd love to hear from you.</p>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT SECTION ========== -->
+        <section class="contact-section section-padding" id="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- FORM -->
+                    <div class="contact-form-wrap reveal" data-reveal="fade-right">
+                        <h2>Send an Inquiry</h2>
+                        <p class="contact-form-desc">Fill out the form below and we'll get back to you within 24 hours.</p>
+                        <form class="contact-form" id="contactForm" novalidate>
+                            <div class="form-group">
+                                <input type="text" id="contactName" name="name" required autocomplete="name" placeholder=" ">
+                                <label for="contactName">Your Name *</label>
+                                <span class="form-error" id="nameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="contactEmail" name="email" autocomplete="email" placeholder=" ">
+                                <label for="contactEmail">Email Address</label>
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="contactPhone" name="phone" autocomplete="tel" placeholder=" ">
+                                <label for="contactPhone">Phone Number</label>
+                                <span class="form-error" id="phoneError"></span>
+                            </div>
+                            <div class="form-group">
+                                <select id="contactService" name="eventType" required>
+                                    <option value="" disabled selected>Select Event Type *</option>
+                                    <option value="Wedding">Wedding</option>
+                                    <option value="Candid Photography & Cinematography">Candid Photography & Cinematography</option>
+                                    <option value="Pre-Wedding & Post-Wedding">Pre-Wedding & Post-Wedding</option>
+                                    <option value="Maternity / Baby Shower">Maternity / Baby Shower</option>
+                                    <option value="Baby Shoots">Baby Shoots</option>
+                                    <option value="Documentary Shoots">Documentary Shoots</option>
+                                </select>
+                                <span class="form-error" id="serviceError"></span>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="date" id="contactDate" name="eventDate" placeholder=" ">
+                                    <label for="contactDate">Event Date</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="contactVenue" name="venue" placeholder=" ">
+                                    <label for="contactVenue">Venue / Location</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select id="contactBudget" name="budget">
+                                    <option value="" disabled selected>Approximate Budget</option>
+                                    <option value="Under ₹50,000">Under ₹50,000</option>
+                                    <option value="₹50,000 - ₹1,00,000">₹50,000 – ₹1,00,000</option>
+                                    <option value="₹1,00,000 - ₹2,00,000">₹1,00,000 – ₹2,00,000</option>
+                                    <option value="Above ₹2,00,000">Above ₹2,00,000</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="contactMessage" name="message" rows="4" required placeholder=" "></textarea>
+                                <label for="contactMessage">Tell Us About Your Event *</label>
+                                <span class="form-error" id="messageError"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary contact-form__submit" id="submitBtn">
+                                <span class="btn-text">Send Inquiry</span>
+                                <span class="btn-loading" hidden>Sending...</span>
+                            </button>
+                        </form>
+                        <!-- Success Message -->
+                        <div class="contact-success" id="contactSuccess" hidden>
+                            <div class="contact-success__icon">✓</div>
+                            <h3>Thank You!</h3>
+                            <p>Your inquiry has been sent successfully. We'll get back to you within 24 hours.</p>
+                            <button class="btn btn-outline" id="sendAnother">Send Another Inquiry</button>
+                        </div>
+                    </div>
+
+                    <!-- CONTACT INFO -->
+                    <div class="contact-info reveal" data-reveal="fade-left" data-delay="200">
+                        <h2>Get in Touch</h2>
+                        <p>Prefer to reach out directly? Here's how you can find us.</p>
+
+                        <div class="contact-info__card">
+                            <div class="contact-info__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <h3>Phone</h3>
+                                <a href="tel:+917676147560" class="contact-info__link">+91 76761 47560</a>
+                                <p class="contact-info__note">Available Mon–Sat, 9 AM – 8 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info__card">
+                            <div class="contact-info__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            </div>
+                            <div>
+                                <h3>Instagram</h3>
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="contact-info__link">@rajphotography</a>
+                                <p class="contact-info__note">Follow us for latest work & BTS</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info__card">
+                            <div class="contact-info__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <h3>Location</h3>
+                                <a href="#" class="contact-info__link">View on Google Maps</a>
+                                <p class="contact-info__note">Based in Karnataka, India — available worldwide</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info__availability">
+                            <h3>Quick Response Guaranteed</h3>
+                            <p>We respond to all inquiries within 24 hours. For urgent bookings, please call directly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-text">Raj</span>
+                        <span class="footer__logo-sub">Photography</span>
+                    </a>
+                    <p class="footer__tagline">Capturing love stories, one frame at a time. Based in Karnataka, available worldwide.</p>
+                    <div class="footer__social">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Follow us on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="tel:+917676147560" class="footer__social-link" aria-label="Call us"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4 class="footer__heading">Get in Touch</h4>
+                    <ul>
+                        <li><a href="tel:+917676147560"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> +91 76761 47560</a></li>
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> @rajphotography</a></li>
+                        <li><a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Karnataka, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Raj Photography. All rights reserved.</p>
+                <p>Crafted with love for capturing love.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data/services.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/scrollReveal.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

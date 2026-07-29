@@ -1,0 +1,164 @@
+/* E:\Project\RajPhotography\css\services.css */
+.services-hero {
+  padding-top: calc(var(--nav-height) + var(--space-4xl));
+  padding-bottom: var(--space-4xl);
+  text-align: center;
+  background-color: var(--color-bg-alt);
+}
+
+/* Service Cards (Grid) */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.srv-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  aspect-ratio: 4/5;
+  group: srv;
+}
+
+.srv-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.srv-card:hover img {
+  transform: scale(1.05);
+}
+
+.srv-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,23,20,0.9) 0%, rgba(26,23,20,0.2) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-2xl);
+  color: var(--color-white);
+}
+
+.srv-overlay h3 {
+  color: var(--color-white);
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+  transition: transform var(--transition-base);
+}
+
+.srv-overlay p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all var(--transition-base);
+  margin-bottom: 0;
+}
+
+.srv-card:hover .srv-overlay h3 {
+  transform: translateY(-10px);
+}
+
+.srv-card:hover .srv-overlay p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Pricing Packages */
+.pricing-section {
+  background-color: var(--color-bg);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricing-card {
+  background: var(--color-white);
+  padding: var(--space-3xl) var(--space-2xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--color-accent);
+  position: relative;
+  padding: var(--space-4xl) var(--space-2xl);
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.pricing-card h3 {
+  font-family: var(--font-accent);
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+}
+
+.pricing-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-xl);
+}
+
+.pricing-price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+}
+
+.pricing-features {
+  list-style: none;
+  margin-bottom: var(--space-2xl);
+  text-align: left;
+}
+
+.pricing-features li {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-light);
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}

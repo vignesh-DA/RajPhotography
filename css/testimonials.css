@@ -1,0 +1,86 @@
+/* E:\Project\RajPhotography\css\testimonials.css */
+.testimonials-hero {
+  padding-top: calc(var(--nav-height) + var(--space-4xl));
+  padding-bottom: var(--space-4xl);
+  text-align: center;
+}
+
+.testi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .testi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .testi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .testi-card:nth-child(4n+1) {
+    grid-column: span 2;
+  }
+}
+
+.testi-card {
+  background-color: var(--color-bg-alt);
+  padding: var(--space-3xl);
+  border-radius: var(--radius-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.testi-card:nth-child(even) {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+}
+
+.quote-icon {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--color-accent);
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: var(--space-md);
+}
+
+.testi-quote {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  color: var(--color-text);
+  line-height: 1.5;
+  margin-bottom: var(--space-xl);
+  flex-grow: 1;
+}
+
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.testi-meta h4 {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.testi-meta p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.testi-rating {
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+  font-size: 1.2rem;
+}
