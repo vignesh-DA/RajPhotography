@@ -83,11 +83,32 @@
 }
 
 .testimonial-card__avatar {
+    /* Avatar is a <div> containing text initials — NOT an <img> */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    object-fit: cover;
+    overflow: hidden;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
     border: 2px solid var(--color-bg-alt);
+    user-select: none;
+}
+
+/* If real client photos are ever used inside .testimonial-card__avatar */
+.testimonial-card__avatar img {
+    display: block;
+    width: 100%;
+    height: 100%; /* Override global img { height: auto } */
+    object-fit: cover;
+    object-position: center top; /* Favour the face */
+    border-radius: 50%;
 }
 
 .testimonial-card__info {

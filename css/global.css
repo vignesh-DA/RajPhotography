@@ -275,9 +275,9 @@ h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 /* ===== PAGE HERO ===== */
 .page-hero {
     position: relative;
-    height: 55vh;
-    min-height: 420px;
-    max-height: 600px;
+    height: 70vh;
+    min-height: 480px;
+    max-height: 750px;
     display: flex;
     align-items: center;
     justify-content: center;

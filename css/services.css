@@ -38,15 +38,19 @@
 }
 
 .service-card__image {
-    aspect-ratio: 16/10;
+    aspect-ratio: 4/5;
     overflow: hidden;
     position: relative;
+    /* Explicit height prevents flex/grid children from collapsing */
+    width: 100%;
 }
 
 .service-card__image img {
+    display: block;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Must override global: img { height: auto } */
     object-fit: cover;
+    object-position: center;
     transition: transform var(--transition-slow);
 }
 
