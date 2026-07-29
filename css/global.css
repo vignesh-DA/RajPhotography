@@ -285,6 +285,13 @@ h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     color: var(--color-white);
 }
 
+@media (max-width: 768px) {
+    .page-hero {
+        height: 55vh;
+        min-height: 380px;
+    }
+}
+
 .page-hero__bg {
     position: absolute;
     inset: 0;

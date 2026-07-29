@@ -92,6 +92,24 @@
     gap: var(--space-md);
 }
 
+@media (max-width: 576px) {
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero__cta {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .hero__cta .btn {
+        width: 100%;
+    }
+}
+
 .hero__cta .btn-outline {
     color: var(--color-white);
     border-color: rgba(255, 255, 255, 0.5);

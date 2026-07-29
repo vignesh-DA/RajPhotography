@@ -161,7 +161,7 @@
 .package-card {
     background: var(--color-white);
     border-radius: var(--radius-lg);
-    padding: var(--space-2xl) var(--space-xl);
+    padding: var(--space-xl) var(--space-lg);
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-border);
     position: relative;
