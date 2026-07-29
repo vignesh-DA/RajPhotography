@@ -1,171 +1,334 @@
-/* ===== ABOUT PAGE ===== */
+/* ==========================================================================
+   ABOUT PAGE STYLES
+   ========================================================================== */
 
-/* About Intro */
+/* ===== ABOUT INTRO ===== */
 .about-intro__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space-xl);
+    gap: var(--space-2xl);
     align-items: center;
 }
-@media (min-width: 768px) {
-    .about-intro__grid { grid-template-columns: 1fr 1fr; gap: var(--space-3xl); }
+
+@media (min-width: 992px) {
+    .about-intro__grid {
+        grid-template-columns: 1fr 1.1fr;
+        gap: var(--space-4xl);
+    }
 }
+
 .about-intro__image {
-    aspect-ratio: 4/5;
-    border-radius: var(--radius-sm);
+    position: relative;
+    border-radius: var(--radius-lg);
     overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 4/5;
 }
+
 .about-intro__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.about-intro__lead {
-    font-size: 1.15rem;
-    color: var(--color-text);
-    line-height: 1.7;
-    margin-bottom: var(--space-md);
-}
-.about-intro__content h2 { margin-bottom: var(--space-lg); }
-.about-intro__content p { font-size: 0.95rem; line-height: 1.8; }
 
-/* Philosophy */
-.about-philosophy { background-color: var(--color-bg-alt); }
-.about-philosophy__inner {
+.about-intro__image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    margin: var(--space-md);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.about-intro__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.about-intro__content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-text);
+    line-height: 1.2;
+    margin-bottom: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+    .about-intro__content h2 {
+        font-size: 3.5rem;
+    }
+}
+
+.about-intro__lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.about-intro__content p:not(.about-intro__lead) {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+/* ===== PHILOSOPHY ===== */
+.about-philosophy {
+    background-color: var(--color-bg-alt);
     text-align: center;
+}
+
+.about-philosophy__inner {
     max-width: 800px;
     margin: 0 auto;
-}
-.about-philosophy__quote-mark {
-    font-family: var(--font-heading);
-    font-size: 7rem;
-    line-height: 0.5;
-    color: var(--color-accent);
-    opacity: 0.25;
-    margin-bottom: var(--space-lg);
-}
-.about-philosophy__quote {
-    font-family: var(--font-accent);
-    font-size: clamp(1.2rem, 2vw, 1.6rem);
-    font-style: italic;
-    color: var(--color-text);
-    line-height: 1.8;
-    border: none;
-    padding: 0;
-    margin-bottom: var(--space-md);
-}
-.about-philosophy__attribution {
-    font-family: var(--font-body);
-    font-size: 0.85rem;
-    color: var(--color-text-lighter);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    position: relative;
+    padding: var(--space-2xl) 0;
 }
 
-/* Approach */
+.about-philosophy__quote-mark {
+    font-family: var(--font-heading);
+    font-size: 8rem;
+    line-height: 1;
+    color: var(--color-accent);
+    opacity: 0.2;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.about-philosophy__quote {
+    font-family: var(--font-accent);
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: var(--color-text);
+    font-style: italic;
+    margin-bottom: var(--space-lg);
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .about-philosophy__quote {
+        font-size: 2.5rem;
+    }
+}
+
+.about-philosophy__attribution {
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+/* ===== APPROACH ===== */
 .about-approach__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
 }
+
 @media (min-width: 768px) {
-    .about-approach__grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-xl); }
+    .about-approach__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
 }
+
 .about-approach__card {
+    background: var(--color-white);
+    padding: var(--space-2xl) var(--space-lg);
+    border-radius: var(--radius-lg);
     text-align: center;
-    padding: var(--space-xl) var(--space-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    transition: all var(--transition-base);
 }
+
 .about-approach__card:hover {
-    border-color: var(--color-accent);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-md);
-    transform: translateY(-4px);
 }
+
 .about-approach__icon {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 64px;
     height: 64px;
-    border-radius: 50%;
     background: var(--color-bg-alt);
-    margin: 0 auto var(--space-md);
+    border-radius: 50%;
     color: var(--color-accent);
+    margin-bottom: var(--space-lg);
 }
-.about-approach__card h3 { margin-bottom: var(--space-sm); }
-.about-approach__card p { font-size: 0.9rem; }
 
-/* Image Break */
+.about-approach__card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+}
+
+.about-approach__card p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ===== IMAGE BREAK ===== */
 .about-image-break {
-    padding: 0;
-}
-.about-image-break__inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    aspect-ratio: 16/9;
+    padding: var(--space-2xl) 0;
     overflow: hidden;
-    border-radius: var(--radius-sm);
 }
+
+.about-image-break__inner {
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+}
+
 .about-image-break__inner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Journey */
+/* ===== JOURNEY TIMELINE ===== */
 .about-journey__timeline {
+    max-width: 800px;
+    margin: var(--space-3xl) auto 0;
     position: relative;
-    max-width: 700px;
-    margin: 0 auto;
-    padding-left: var(--space-xl);
 }
+
 .about-journey__timeline::before {
     content: '';
     position: absolute;
-    left: 0;
     top: 0;
     bottom: 0;
-    width: 1px;
+    left: 24px;
+    width: 2px;
     background: var(--color-border-strong);
 }
+
+@media (min-width: 768px) {
+    .about-journey__timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 .about-journey__item {
     position: relative;
-    padding-bottom: var(--space-xl);
-    padding-left: var(--space-lg);
+    padding-left: 64px;
+    margin-bottom: var(--space-2xl);
 }
-.about-journey__item::before {
-    content: '';
-    position: absolute;
-    left: calc(-1 * var(--space-xl));
-    top: 8px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--color-accent);
-    border: 2px solid var(--color-bg);
-    box-shadow: 0 0 0 4px var(--color-bg);
-}
-.about-journey__year {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    margin-bottom: var(--space-xs);
-}
-.about-journey__content h3 {
-    font-size: 1.15rem;
-    margin-bottom: var(--space-xs);
-}
-.about-journey__content p { font-size: 0.9rem; }
 
-/* About CTA */
-.about-cta__inner {
-    text-align: center;
-    background: var(--color-bg-alt);
-    padding: var(--space-3xl) var(--space-xl);
-    border-radius: var(--radius-md);
+@media (min-width: 768px) {
+    .about-journey__item {
+        padding-left: 0;
+        width: 50%;
+    }
+    
+    .about-journey__item:nth-child(odd) {
+        padding-right: 48px;
+        text-align: right;
+        left: 0;
+    }
+    
+    .about-journey__item:nth-child(even) {
+        padding-left: 48px;
+        left: 50%;
+    }
 }
-.about-cta__inner h2 { margin-bottom: var(--space-sm); }
-.about-cta__inner p { margin-bottom: var(--space-lg); font-size: 1.05rem; }
+
+.about-journey__item:last-child {
+    margin-bottom: 0;
+}
+
+.about-journey__year {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    background: var(--color-bg);
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+@media (min-width: 768px) {
+    .about-journey__year {
+        left: auto;
+        right: -24px;
+    }
+    
+    .about-journey__item:nth-child(even) .about-journey__year {
+        left: -24px;
+        right: auto;
+    }
+}
+
+.about-journey__content {
+    background: var(--color-white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+}
+
+.about-journey__content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+}
+
+.about-journey__content p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ===== ABOUT CTA ===== */
+.about-cta {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.about-cta__inner {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.about-cta h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-white);
+    margin: 0;
+}
+
+.about-cta p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
