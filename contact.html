@@ -71,6 +71,12 @@
                         <h2>Send an Inquiry</h2>
                         <p class="contact-form-desc">Fill out the form below and we'll get back to you within 24 hours.</p>
                         <form class="contact-form" id="contactForm" novalidate>
+                            <!-- Web3Forms: routes submissions to ntraj767@gmail.com -->
+                            <input type="hidden" name="access_key" value="9b2f922a-63ba-4470-b240-33bf2edb7a0e">
+                            <input type="hidden" name="subject" value="New Inquiry — Raj Photography">
+                            <input type="hidden" name="from_name" value="Raj Photography Website">
+                            <!-- Honeypot spam trap (must stay empty) -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
                             <div class="form-group">
                                 <input type="text" id="contactName" name="name" required autocomplete="name" placeholder=" ">
                                 <label for="contactName">Your Name *</label>
