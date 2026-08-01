@@ -37,6 +37,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 20%;
 }
 
 .hero__slide.active .hero__image {
@@ -158,6 +159,12 @@
 @keyframes scrollDown {
     0% { transform: translateY(-100%); }
     100% { transform: translateY(200%); }
+}
+
+@media (max-height: 750px) {
+    .hero__scroll-indicator {
+        display: none;
+    }
 }
 
 /* ===== FEATURED WORK ===== */
