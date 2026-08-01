@@ -36,10 +36,7 @@
         var badgeHTML = isPremium ? '<span class="package-card__badge">Most Popular</span>' : '';
 
         var inclusionsHTML = pkg.inclusions.map(function(item) {
-            return '<li>' +
-                   '  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>' +
-                   '  ' + item +
-                   '</li>';
+            return '<li>' + item + '</li>';
         }).join('');
 
         return '<div class="package-card ' + (isPremium ? 'package-card--featured' : '') + ' reveal" data-reveal="fade-up" data-delay="' + delay + '">' +

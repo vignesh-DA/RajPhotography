@@ -520,6 +520,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 17%;
     z-index: -2;
 }
 
@@ -579,4 +580,139 @@
 .cta-banner__phone:hover {
     background-color: var(--color-white);
     color: var(--color-dark);
+}
+
+/* ===== INTERACTIVE DATE CHECKER & CLIENT CONSULTATION WIDGET ===== */
+.quick-inquiry-section {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-inquiry-box {
+    background: var(--glass-bg-dark);
+    border: 1px solid var(--glass-border-dark);
+    backdrop-filter: var(--glass-backdrop);
+    -webkit-backdrop-filter: var(--glass-backdrop);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    max-width: 950px;
+    margin: 0 auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.quick-inquiry-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+    align-items: end;
+}
+
+.quick-inquiry-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.quick-inquiry-field label {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-gold-light);
+    font-weight: 600;
+}
+
+.quick-inquiry-field input,
+.quick-inquiry-field select {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: var(--color-white);
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+.quick-inquiry-field select option {
+    background: var(--color-dark);
+    color: var(--color-white);
+}
+
+.quick-inquiry-field input:focus,
+.quick-inquiry-field select:focus {
+    border-color: var(--color-accent);
+}
+
+.quick-inquiry-submit {
+    width: 100%;
+    height: 48px;
+    font-size: 0.85rem;
+}
+
+/* ===== CLIENT FAQ ACCORDION ===== */
+.faq-section {
+    background-color: var(--color-bg);
+}
+
+.faq-list {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.faq-item {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.faq-item.active {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+    width: 100%;
+    padding: var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--color-dark);
+    text-align: left;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.faq-question svg {
+    transition: transform var(--transition-base);
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-question svg {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-smooth), padding var(--transition-smooth);
+    padding: 0 var(--space-lg);
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 0 var(--space-lg) var(--space-lg);
 }

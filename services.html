@@ -91,6 +91,64 @@
             </div>
         </section>
 
+        <!-- ========== CUSTOM PACKAGE ESTIMATOR ========== -->
+        <section class="estimator-section section-padding" id="estimator">
+            <div class="container">
+                <div class="section-header reveal" data-reveal="fade-up">
+                    <p class="section-subtitle">Custom Calculator</p>
+                    <h2>Package Estimator</h2>
+                    <p class="section-desc">Select your coverage details to build a tailored estimate for your upcoming shoot.</p>
+                </div>
+                <div class="estimator-box reveal" data-reveal="fade-up">
+                    <div class="estimator-grid">
+                        <form class="estimator-form" id="estimatorForm">
+                            <div class="estimator-group">
+                                <label class="estimator-label" for="estCategory">Shoot Type</label>
+                                <select class="estimator-select" id="estCategory">
+                                    <option value="wedding" data-base="60000">Wedding Ceremony & Reception</option>
+                                    <option value="candid" data-base="35000">Candid Photography & Film</option>
+                                    <option value="prewedding" data-base="25000">Pre-Wedding / Outdoor Shoot</option>
+                                    <option value="maternity" data-base="20000">Maternity & Baby Shower</option>
+                                    <option value="baby" data-base="15000">Baby & Birthday Shoot</option>
+                                </select>
+                            </div>
+
+                            <div class="estimator-group">
+                                <label class="estimator-label" for="estDuration">Coverage Duration</label>
+                                <select class="estimator-select" id="estDuration">
+                                    <option value="1" data-mult="1.0">Single Day (Up to 8 Hours)</option>
+                                    <option value="2" data-mult="1.8">2 Days (Full Coverage)</option>
+                                    <option value="3" data-mult="2.5">3 Days Grand Wedding Event</option>
+                                </select>
+                            </div>
+
+                            <div class="estimator-group">
+                                <label class="estimator-label">Add-On Deliverables</label>
+                                <div class="estimator-checkboxes">
+                                    <label class="estimator-checkbox">
+                                        <input type="checkbox" id="addOnDrone" data-price="12000"> 4K Aerial Drone Filming
+                                    </label>
+                                    <label class="estimator-checkbox">
+                                        <input type="checkbox" id="addOnAlbum" data-price="15000" checked> Premium Fine Art Leather Album
+                                    </label>
+                                    <label class="estimator-checkbox">
+                                        <input type="checkbox" id="addOnReel" data-price="8000" checked> Instagram Teaser Reel (Instagram Ready)
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="estimator-result-card">
+                            <span class="estimator-price-title">Estimated Investment</span>
+                            <div class="estimator-price-val" id="estPriceDisplay">₹83,000</div>
+                            <p class="estimator-price-detail">Includes RAW capture, Lightroom editorial color grading & Photoshop fine retouching.</p>
+                            <a href="#" id="estBookBtn" target="_blank" class="btn btn-primary estimator-btn">Book This Custom Package</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ========== PROCESS ========== -->
         <section class="process section-padding" id="process">
             <div class="container">
